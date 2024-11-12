@@ -1,0 +1,102 @@
+/* Contêiner Principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Três colunas principais */
+    grid-template-rows: auto auto auto 1fr auto auto; /* Linhas definindo o layout */
+    grid-template-areas: 
+      "header header header"
+      "navbar navbar navbar"
+      "main-banner main-banner main-banner"
+      "left-sidebar main-content right-sidebar"
+      "gallery gallery gallery"
+      "featured-articles featured-articles featured-articles"
+      "footer footer footer";
+    gap: 5px;
+    /* padding: 5px; */
+    height: 100vh;
+  }
+  
+  /* Estilos para cada área */
+  .header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .main-banner {
+    grid-area: main-banner;
+    background-color: #8cb2ff;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5em;
+  }
+  
+  .left-sidebar {
+    grid-area: left-sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    background-color: #e4e4e4;
+    padding: 20px;
+  }
+  
+  .right-sidebar {
+    grid-area: right-sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .gallery {
+    grid-area: gallery;
+    background-color: #d1e751;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .featured-articles {
+    grid-area: featured-articles;
+    background-color: #ffcc5c;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "navbar"
+        "main-banner"
+        "main-content"
+        "left-sidebar"
+        "right-sidebar"
+        "gallery"
+        "featured-articles"
+        "footer";
+    }
+  }
+  

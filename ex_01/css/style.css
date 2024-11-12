@@ -1,0 +1,42 @@
+/* Contêiner Principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Duas colunas, a primeira menor */
+    grid-template-rows: auto 1fr auto; /* Três linhas, com conteúdo principal ajustável */
+    grid-template-areas: 
+      "header header "
+      "sidebar content"
+      "footer footer";
+    gap: 5px; /* Espaço entre os itens */
+    height: 100vh; /* Altura total da tela */
+  }
+  
+  /* Estilos para cada área */
+  .header {
+    grid-area: header;
+    background-color: #0018ee;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .content {
+    grid-area: content;
+    background-color: #e4e4e4;
+    padding: 20px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #0018ee;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  

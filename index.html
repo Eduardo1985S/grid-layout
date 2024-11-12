@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Layout com CSS Grid</title>
+    <style>
+        /* Estilos básicos para o layout */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #4a4a4a;
+        }
+
+        /* Contêiner principal */
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* Título estilizado */
+        h1 {
+            font-size: 2em;
+            color: #6d6875;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para lista */
+        ul {
+            list-style: none;
+        }
+
+        /* Estilo dos links como botões */
+        .link-button {
+            display: block;
+            background-color: #0004e9;
+            color: #e6edff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Efeitos de hover para links */
+        .link-button:hover {
+            background-color: #e6edff;
+            color: #0004e9;
+            box-shadow: 0 6px 15px rgba(242, 201, 200, 0.2);
+            transform: scale(1.03);
+        }
+
+        /* Pequeno rodapé */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #a5a5a5;
+        }
+
+        footer a {
+            color: #6d6875;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Layouts com CSS Grid</h1>
+        <ul>
+            <li><a href="./ex_01/index.html" class="link-button" target="_blank">Layout Simples: Cabeçalho e
+                    Conteúdo</a></li>
+            <li><a href="./ex_02/index.html" class="link-button" target="_blank">Layout Moderado: Menu, Conteúdo e
+                    Rodapé</a></li>
+            <li><a href="./ex_03/index.html" class="link-button" target="_blank">Layout Complexo: Banner, Galeria e
+                    Destaques</a></li>
+        </ul>
+        <footer>
+            <p>Desenvolvido com ♥ por <a href="https://www.linkedin.com/in/eduardo-correia-dev/">Eduardo Correia</a></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

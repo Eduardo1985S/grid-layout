@@ -1,0 +1,78 @@
+/* Contêiner Principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Três colunas */
+    grid-template-rows: auto auto 1fr auto auto; /* Linhas */
+    grid-template-areas: 
+      "header header header"
+      "navbar navbar navbar"
+      "sidebar main-content news"
+      "highlights main-content news"
+      "footer footer footer";
+    gap: 5px;
+    height: 100vh; /* Ocupa a altura total da tela */
+  }
+  
+  /* Estilos para cada área */
+  .header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    background-color: #e4e4e4;
+    padding: 20px;
+  }
+  
+  .highlights {
+    grid-area: highlights;
+    background-color: #ffc107;
+    padding: 20px;
+  }
+  
+  .news {
+    grid-area: news;
+    background-color: #17a2b8;
+    padding: 20px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "navbar"
+        "main-content"
+        "highlights"
+        "news"
+        "sidebar"
+        "footer";
+    }
+  }
+  
